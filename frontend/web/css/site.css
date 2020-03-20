@@ -1,0 +1,731 @@
+html,
+body {
+    height: 100%;
+    font-family: 'Rubik', sans-serif;
+}
+
+.footer {
+    height: 4rem;
+    background-color: #f5f5f5;
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+}
+
+/* add sorting icons to gridview sort links */
+a.asc:after, a.desc:after {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    padding-left: 5px;
+}
+
+a.asc:after {
+    content: "\e151";
+}
+
+a.desc:after {
+    content: "\e152";
+}
+
+.grid-view td {
+    white-space: nowrap;
+}
+
+.grid-view .filters input,
+.grid-view .filters select {
+    min-width: 50px;
+}
+
+.hint-block {
+    display: block;
+    margin-top: 5px;
+    color: #999;
+}
+
+.error-summary {
+    color: #a94442;
+    background: #fdf7f7;
+    border-left: 3px solid #eed3d7;
+    padding: 10px 20px;
+    margin: 0 0 15px 0;
+}
+/* ------------------- */
+.link-leaving {
+    display: inline-block;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+}
+.link-leaving:after {
+    display: block;
+    content: "";
+    width: 0%;
+    -webkit-transition: width .3s ease-in-out;
+    -moz--transition: width .3s ease-in-out;
+    transition: width .3s ease-in-out;
+}
+.link-leaving:hover:after,
+.link-leaving:focus:after {
+    width: 100%;
+}
+.block-title {
+    font-size: 2rem;
+}
+.alert {
+    font-size: 1.3rem;
+}
+
+#logo {
+    height: 8rem;
+    weight: 4rem;
+}
+#logo-name {
+    color: #1a69b8;
+    position: absolute;
+    left: 10rem;
+    top: 1.5rem;
+    font-size: 2rem;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    white-space: nowrap;
+}
+#main-menu {
+    background: #007BFF;
+    padding: 1rem 0;
+}
+#main-menu a {
+    color: white;
+    font-size: 1.3rem;
+}
+#main-menu a:after {
+    background-color: white;
+    height: 1px;
+}
+#main-menu button {
+    color: white;
+    font-size: 1.3rem;
+    background-color: #007BFF;
+}
+#main-menu button:after {
+    background-color: white;
+    height: 1px;
+}
+#main-menu button:hover
+, #main-menu button:focus {
+    border: none;
+    outline: none;
+}
+
+#main {
+    font-size: 1.4rem;
+}
+#main #welcome {
+    color: #0a73bb;
+}
+#main #menu .item {
+    color: #0a73bb;
+    text-decoration: none;
+}
+#main #menu .item:after {
+    background-color: #0a73bb;
+    height: 1px;
+}
+#main #menu span {
+    color: #7c7c7c;
+}
+#main #menu input[type=text] {
+    float: left;
+    width: 7rem;
+}
+#main #menu form button {
+    margin: -1rem 0 0 0;
+}
+
+#main .seminar .name {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    color: #1a69b8;
+    text-decoration: none;
+}
+#main .seminar .name:after {
+    background-color: #1a69b8;
+    height: 1px;
+}
+#main .seminar .data {
+    background: #EAEAEA;
+    line-height: 2.8rem;
+    font-size: 1.5rem;
+}
+#main .seminar .data span {
+    font-size: 1.7rem;
+    color: #6DAEFE;
+}
+#main .seminar .title {
+    font-size: 1.4rem;
+}
+#main .seminar .text {
+    font-size: 1.3rem;
+}
+#main .seminar .link-text {
+    font-size: 1.3rem;
+    color: #1a69b8;
+    text-decoration: none;
+}
+#main .seminar .link-text:after {
+    background-color: #1a69b8;
+    height: 1px;
+}
+
+#seminar .name {
+    font-size: 2rem; /* 3 */
+}
+#seminar .data {
+    font-size: 1.8rem;
+}
+#seminar .data span {
+    color: #4866fe;
+}
+#seminar .tbl {
+    font-size: 1.6rem;
+}
+#seminar .tbl span {
+    font-size: 1.5rem;
+    color: black;
+}
+
+#instructor {
+    font-size: 1.8rem;
+}
+#instructor .name {
+    font-size: 2.2rem;
+}
+#instructor .avatar-width {
+    width: 20rem;
+}
+#instructor .avatar-height {
+    height: 20rem;
+}
+#instructor .link {
+    color: #1a69b8;
+    text-decoration: none;
+}
+#instructor .link:after {
+    background-color: #1a69b8;
+    height: 1px;
+}
+#instructor span {
+    color: #4866fe;
+}
+#instructor .social a {
+    float: left;
+}
+#instructor .social img {
+    width: 4rem;
+    height: 4rem;
+}
+#profile .tbl {
+    font-size: 1.5rem;
+}
+#profile .tbl .link {
+    color: #1a69b8;
+    text-decoration: none;
+}
+#profile .tbl .link:after {
+    background-color: #1a69b8;
+    height: 1px;
+}
+
+#site-signup p
+, #site-login p
+, #site-request-password-reset
+, #site-resend-verification-email p {
+    font-size: 1.3rem;
+}
+#site-signup .control-label
+, #site-login .control-label
+, #site-request-password-reset .control-label
+    /*, #seminar-form .control-label*/
+, #site-resend-verification-email {
+    font-size: 1.3rem;
+}
+#site-login .checkbox {
+    font-size: 1.4rem;
+}
+#site-login .ext {
+    color: #999;
+    font-size: 1.2rem;
+}
+#site-login .link {
+    color: #1a69b8;
+    text-decoration: none;
+}
+#site-login .link:after {
+    background-color: #1a69b8;
+    height: 1px;
+}
+
+#lk li {
+    font-size: .9rem;
+}
+#lk .control-label {
+    margin: 0.8rem 0 0 0;
+    font-size: 1.4rem;
+}
+#instructor
+, #lk-about
+, #lk-seminars
+, #edit-profile
+, #edit-about
+, #seminar-form {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+#lk-seminars .tbl {
+    font-size: 1.5rem;
+}
+#lk-seminars .dropdown-item {
+    font-size: 1.3rem;
+}
+#lk-seminars .dropdown-item:hover {
+    background: #B7E2E9;
+}
+
+#edit-profile .file-thumbnail-footer
+, #seminar-form .file-thumbnail-footer {
+    display: none;
+}
+#edit-profile .btn-avatar
+, #seminar-form .btn-avatar {
+    font-size: 1.6rem;
+    width: 100%;
+    text-align: center;
+    border-radius: 0.5rem;
+    padding: 1rem 0;
+    cursor: pointer;
+}
+#edit-profile p
+, #seminar-form p {
+    font-size: 1.2rem;
+    text-align: center;
+}
+#edit-profile .cb
+, #seminar-form .cb
+, #seminar-form .rb {
+    font-weight: normal;
+    font-size: 1.4rem;
+    display: inline-block;
+    color: #585858;
+}
+
+#seminar-form .img-select .select2-selection {
+    height: 11rem;
+}
+#seminar-form .logo {
+    float: left;
+//    width: 6rem;
+}
+#seminar-form .select2-selection__clear {
+    display: none;
+}
+#seminar-form .alert p {
+    text-align: left;
+    font-size: 1.5rem;
+}
+div.required label:after {
+    content: " *";
+    color: red;
+}
+#seminar-language label:after {
+    content: "";
+}
+
+@media (min-width: 375px) {
+    #logo-name {
+        left: 9.8rem;
+        top: 1.1rem;
+        font-size: 2.4rem;
+    }
+    #lk li {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 425px) {
+    #logo-name {
+        top: .9rem;
+        font-size: 2.8rem;
+    }
+    #main-menu {
+        padding: .9rem 0;
+    }
+    #main-menu a {
+        font-size: 1.5rem;
+    }
+    #main-menu button {
+        font-size: 1.5rem;
+    }
+    #lk li {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 576px) {
+    #logo {
+        height: 10rem;
+        weight: 5rem;
+    }
+    #logo-name {
+        left: 12rem;
+        top: 1.2rem;
+        font-size: 3rem;
+    }
+    #main #menu form button {
+        margin: 0;
+    }
+    #main-menu {
+        padding: .8rem 0;
+    }
+    #main-menu a {
+        font-size: 1.6rem;
+    }
+    #main-menu button {
+        font-size: 1.6rem;
+    }
+    #main #welcome {
+        font-size: 1.5rem;
+    }
+    #lk li {
+        font-size: 2rem;
+    }
+
+}
+
+@media (min-width: 768px) {
+    #logo-name {
+        left: 12rem;
+        top: .8rem;
+        font-size: 4rem;
+    }
+    #main-menu {
+        padding: .7rem 0;
+    }
+    #main-menu a {
+        font-size: 1.8rem;
+    }
+    #main-menu button {
+        font-size: 1.8rem;
+    }
+    #main-menu button:after {
+        height: 2px;
+    }
+    #main-menu a:after {
+        height: 2px;
+    }
+    #main #welcome {
+        font-size: 1.7rem;
+    }
+
+}
+
+@media (min-width: 992px) {
+    #logo {
+        height: 12rem;
+        weight: 6rem;
+    }
+    #logo-name {
+        left: 14rem;
+        top: .6rem;
+        font-size: 5rem;
+    }
+    #main-menu {
+        padding: .6rem 0;
+    }
+    #main-menu a {
+        font-size: 2rem;
+    }
+    #main-menu button {
+        font-size: 2rem;
+    }
+
+    #main #welcome {
+        font-size: 1.8rem;
+    }
+
+}
+
+/* OLD */
+/*
+.link-leaving {
+    display: inline-block;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+}
+.link-leaving:after {
+    display: block;
+    content: "";
+    width: 0%;
+    -webkit-transition: width .3s ease-in-out;
+    -moz--transition: width .3s ease-in-out;
+    transition: width .3s ease-in-out;
+}
+.link-leaving:hover:after,
+.link-leaving:focus:after {
+    width: 100%;
+}
+.block-title {
+    font-size: 2rem;
+}
+.alert {
+    font-size: 1.3rem;
+}
+
+#logo-name {
+    color: #1a69b8;
+    position: absolute;
+    left: 15rem;
+    top: 2rem;
+    font-size: 5rem;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    font-style: italic;
+}
+#navbarContent .nav-link {
+    color: #1a69b8;
+    font-size: 2rem;
+}
+#navbarContent .nav-link:after {
+    background-color: #4082b8;
+    height: 2px;
+}
+#navbarContent button {
+    background-color: white;
+}
+#navbarContent button:hover
+, #navbarContent button:focus {
+    border: none;
+    outline: none;
+}
+
+#main #welcome {
+    font-size: 1.7rem;
+    color: #0a73bb;
+}
+#main #count {
+    font-size: 1.5rem;
+}
+#main #menu {
+    font-size: 1.4rem;
+}
+#main #menu .item {
+    color: #0a73bb;
+    text-decoration: none;
+}
+#main #menu .item:after {
+    background-color: #0a73bb;
+    height: 1px;
+}
+#main #menu span {
+    color: #7c7c7c;
+}
+#main #menu input[type=text] {
+    float: left;
+    width: 7rem;
+}
+#main #menu form {
+    margin: -.6rem 0 0 0;
+}
+#main .seminar .name {
+    font-size: 2.2rem;
+    color: #1a69b8;
+    text-decoration: none;
+}
+#main .seminar .name:after {
+    background-color: #1a69b8;
+    height: 2px;
+}
+#main .seminar .date {
+    background: #EAEAEA;
+    line-height: 3.8rem;
+    font-size: 1.6rem;
+}
+#main .seminar .date span {
+    font-size: 1.8rem;
+    color: #6DAEFE;
+}
+#main .seminar .title {
+    font-size: 1.4rem;
+}
+#main .seminar .text {
+    font-size: 1.3rem;
+}
+#main .seminar .link-text {
+    font-size: 1.3rem;
+    color: #1a69b8;
+    text-decoration: none;
+}
+#main .seminar .link-text:after {
+    background-color: #1a69b8;
+    height: 1px;
+}
+
+#seminar .name {
+    font-size: 3rem;
+}
+#seminar .data {
+    font-size: 1.8rem;
+}
+#seminar .data span {
+    color: #4866fe;
+}
+#seminar .tbl {
+    font-size: 1.6rem;
+}
+#seminar .tbl span {
+    font-size: 1.5rem;
+    color: black;
+}
+
+#instructor {
+    font-size: 1.8rem;
+}
+#instructor .name {
+    font-size: 3rem;
+}
+#instructor .avatar-width {
+    width: 20rem;
+}
+#instructor .avatar-height {
+    height: 20rem;
+}
+#instructor .link {
+    color: #1a69b8;
+    text-decoration: none;
+}
+#instructor .link:after {
+    background-color: #1a69b8;
+    height: 1px;
+}
+#instructor span {
+    color: #4866fe;
+}
+#instructor .social a {
+    float: left;
+}
+#instructor .social img {
+    width: 4rem;
+    height: 4rem;
+}
+
+
+#site-signup p
+, #site-login p
+, #site-request-password-reset
+, #site-resend-verification-email p {
+    font-size: 1.3rem;
+}
+#site-signup .control-label
+, #site-login .control-label
+, #site-request-password-reset .control-label
+, #site-resend-verification-email {
+      font-size: 1.3rem;
+  }
+#site-login .checkbox {
+    font-size: 1.4rem;
+}
+#site-login .ext {
+    color: #999;
+    font-size: 1.2rem;
+}
+#site-login .link {
+    color: #1a69b8;
+    text-decoration: none;
+}
+#site-login .link:after {
+    background-color: #1a69b8;
+    height: 1px;
+}
+
+#lk li {
+    font-size: 2rem;
+}
+#lk .control-label {
+    margin: 0.8rem 0 0 0;
+    font-size: 1.4rem;
+}
+
+#instructor
+, #lk-about
+, #lk-seminars
+, #edit-profile
+, #edit-about
+, #seminar-form {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+#lk-seminars .tbl {
+    font-size: 1.5rem;
+}
+#lk-seminars .dropdown-item {
+    font-size: 1.3rem;
+}
+#lk-seminars .dropdown-item:hover {
+    background: #B7E2E9;
+}
+
+#edit-profile .file-thumbnail-footer
+, #seminar-form .file-thumbnail-footer {
+    display: none;
+}
+#edit-profile .btn-avatar
+, #seminar-form .btn-avatar {
+    font-size: 1.6rem;
+    width: 100%;
+    text-align: center;
+    border-radius: 0.5rem;
+    padding: 1rem 0;
+    cursor: pointer;
+}
+#edit-profile p
+, #seminar-form p {
+    font-size: 1.2rem;
+    text-align: center;
+}
+#edit-profile .cb
+, #seminar-form .cb
+, #seminar-form .rb {
+    font-weight: normal;
+    font-size: 1.4rem;
+    display: inline-block;
+    color: #585858;
+}
+
+#seminar-form .img-select .select2-selection {
+    height: 11rem;
+}
+#seminar-form .logo {
+    float: left;
+}
+#seminar-form .select2-selection__clear {
+    display: none;
+}
+#seminar-form .alert p {
+    text-align: left;
+    font-size: 1.5rem;
+}
+div.required label:after {
+    content: " *";
+    color: red;
+}
+#seminar-language label:after {
+    content: "";
+}
+ */
